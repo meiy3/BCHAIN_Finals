@@ -13,7 +13,7 @@
 	<nav class="navBar">
         <div class="nav">
             <div class="logo">
-                <a href="home.html"><img src="health.jpg" class="logo-img">KKMNonce</a>
+                <a href="home.html"><img src="health.jpg" class="logo-img">HealCaRL</a>
             </div>
             <ul>
                 <li><a href="record.html">Submit Record</a></li>
@@ -24,8 +24,8 @@
     </nav>
 
 	<div class="connect">
-    <h2>Health Record Ledger</h2>
-    <button onclick="connectWallet()">Connect Wallet</button>
+    <h1>HealCaRL: Health Record Ledger</h1>
+    <button id="connectButton" onclick="connectWallet()">Connect Wallet</button>
 	</div>
 
 	<div class="add">
@@ -34,13 +34,6 @@
     		<label>Diagnosis </label><input type="text" id="diagnosis" /><br>
     		<label>Treatment </label><input type="text" id="treatment" /><br>
     		<button onclick="addRecord()">Add Record</button>
-	</div>
-
-	<div class="view">
-    <h3>View Record by Index</h3>
-    <label>Record Index: </label><input type="number" id="recordIndex" min="0" /><br>
-    <button onclick="getRecordByIndex()">Get Record</button>
-    <div id="recordDetails"></div>
 	</div>
 
     <script>
@@ -177,7 +170,7 @@
 					contract = new web3.eth.Contract(contractABI, contractAddress);
 					accounts = await window.ethereum.request({method: 'eth_requestAccounts'});  
 					alert("Connected to Metamask: " + accounts[0]);
-
+					document.getElementById("connectButton").style.display ='flex';
 				} catch (error) {
 					console.error("Error conecting to Metamask: " + error)
 				}
