@@ -37,18 +37,31 @@ body, html {
 }
 
 #start {
-    color: white;
-    font-family: "Manrope", sans-serif;
-    margin-top: 35px;
-    padding: 20px 30px;
+    transition: .4s;
+    background: #727272;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.26);
+    border: 1px solid #727272;
+    margin: 10px;
+    padding: 15px 30px;  
     font-size: 18px;
+    font-weight: 600;
+    font-family: "Manrope", sans-serif;
+    text-align: center;
+    position: relative;
     cursor: pointer;
-    background-color: #727272;
-    border: none;
-    border-radius: 100px;
-    transition: background 0.3s;
-}
 
+}
 #start:hover {
-    background-color: #696969;
+    transition: .4s;
+    background: 727272;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+    border: 1px solid #727272;
+}
+#start:active {
+    transition: .2s;
+    background: #727272;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border: 1px solid #727272;
 }

@@ -148,20 +148,6 @@
         let contract;
         let accounts;
 
-		// if (typeof window.ethereum !== 'undefined'){
-        //     try {
-		// 			web3 = new Web3(window.ethereum);
-		// 			contract = new web3.eth.Contract(contractABI, contractAddress);
-        //         accounts = await window.ethereum.request({method: 'eth_requestAccounts'});  
-        //         alert("Connected to Metamask: " + accounts[0]);
-
-        //     } catch (error) {
-        //         console.error("Error conecting to Metamask: " + error)
-        //     }
-    
-        // }else{
-        //     console.error("Metamask is not installed or accessible")
-        // }
 
         async function connectWallet() {
             if (typeof window.ethereum !== 'undefined'){
